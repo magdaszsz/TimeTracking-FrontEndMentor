@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+body  {
+  font-family: 'Rubik', sans-serif;
+  background: hsl(226, 43%, 10%);
+  color: #fff;
+
+}
+
+/* - Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%) */
+
+.content-wrapper {
+  display: grid;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  place-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: hsl(235, 46%, 20%);
+  width: max-content;
+  line-height: 1.7;
+}
+
+.card-container {
+  //max-width: 23rem;
+
+}
+
+.card-top {
+  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+    padding: 2rem 1rem;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-weight: 300;
+}
+
+.card-bottom {
+  padding: 1rem;
+}
+
+.card-list {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  color:  hsl(235, 45%, 61%);
+}
+
+.active {
+  color: #fff;
+}
+
+.card-image {
+  margin-right: 1.5rem;
+
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  background-size: contain;
+  background-image: url(images/image-jeremy.png);
+}
+
+.card-image img {
+  object-position: center;
+}
+
+.activity-card, 
+.card-content {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+
+.activity-card {
+  //width: min(23rem, 85%);
+  background-color: hsl(235, 46%, 20%);
+  z-index: -10;
+  position: relative;
+  //border: 2px solid white;
+}
+
+.activity-card::after {
+  position: absolute;
+  height: 1rem;
+  width: 4rem;
+  top: -1rem;
+  right: 2rem;
+  z-index: -1;
+}
+
+.orange::after {
+  content: url(images/icon-work.svg);
+}
+
+.orange {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.blue {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.blue::after {
+  content: url(images/icon-play.svg);
+}
+
+.pink {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.pink::after {
+  content: url(images/icon-study.svg)
+}
+
+.green {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.green::after {
+  content: url(images/icon-exercise.svg);
+}
+
+.purple {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.purple::after {
+  content: url(images/icon-social.svg);
+}
+
+.yellow {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.yellow::after {
+  content: url(images/icon-self-care.svg);
+}
+
+.card-content {
+  padding: 2rem;
+  height: calc(100% - 2.5rem);
+  background-color: hsl(235, 46%, 20%);
+ margin-top: 2.5rem;
+ z-index: 100;
+}
+
+@media (min-width: 900px) {
+  .content-wrapper {
+    grid-template-columns: 16rem 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .card-person {
+    grid-row: 1 / span 2;
+  }
+
+  .card-top {
+    height: 18rem;
+  }
+
+  .card-list {
+    display: block;
+  }
+
+  .activity-card-time {
+    width: 13rem;
+  }
+}
+
+/* activity card */
+.activity-card-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-card-bottom {
+  //border: 2px solid red;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activity-card-title {
+  font-weight: 500;
+}
+
+.activity-card-time {
+  font-size: 3rem;
+  //border: 2px solid white;
+  font-weight: 300;
+}
