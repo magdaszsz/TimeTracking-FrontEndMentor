@@ -12,11 +12,11 @@
 </head>
 <body>
   <div class="content-wrapper">
-    <div class="activity-card card-person">
+    <div class="card-person">
       <div class="card-container">
         <div class="card-top">
           <div class="card-image">
-            <!-- <img src="images/image-jeremy.png" alt="young smiling man"> -->
+         
           </div>
           <div class="card-info">
             Report for</br>
@@ -24,11 +24,12 @@
           </div>
         </div>
           <div class="card-bottom">
-            <ul class="card-list">
-              <li>Daily</li>
-              <li class="active">Weekly</li>
-              <li>Monthly</li>
-            </ul>
+            <div class="time-btns">
+                <button type="button" class="daily-btn btn" data-time="daily">Daily</button>
+                <button type="button" class="weekly-btn btn" data-time="weekly">Weekly</button>
+                <button type="button" class="monthly-btn btn" data-time="monthly">Monthly</button>
+           
+            </div>
           </div>
       </div>
     </div>
@@ -40,9 +41,9 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="activity-card-bottom">
-          <p class="activity-card-time">32hrs</p>
+          <p class="activity-card-time"><span class="current-number"></span>hrs</p>
           <p class="activity-card-previous">
-            Last Week - 36hrs
+            Last Week - <span class="previous-number"></span>hrs
           </p> 
         </div>
       </div>
@@ -56,9 +57,9 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="activity-card-bottom">
-          <p class="activity-card-time">10hrs</p>
+          <p class="activity-card-time"><span class="current-number"></span>hrs</p></p>
           <p class="activity-card-previous">
-            Last Week - 8hrs
+            Last Week - <span class="previous-number"></span>hrs
           </p> 
         </div>
       </div>
@@ -72,9 +73,9 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="activity-card-bottom">
-          <p class="activity-card-time">4hrs</p>
+          <p class="activity-card-time"><span class="current-number"></span>hrs</p>
           <p class="activity-card-previous">
-            Last Week - 7hrs
+            Last Week - <span class="previous-number"></span>hrs
           </p> 
         </div>
       </div>
@@ -88,9 +89,9 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="activity-card-bottom">
-          <p class="activity-card-time">4hrs</p>
+          <p class="activity-card-time"><span class="current-number"></span>hrs</p>
           <p class="activity-card-previous">
-            Last Week - 5hrs
+            Last Week - <span class="previous-number"></span>hrs
           </p> 
         </div>
       </div>
@@ -104,9 +105,9 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="activity-card-bottom">
-          <p class="activity-card-time">5hrs</p>
+          <p class="activity-card-time"><span class="current-number"></span>hrs</p>
           <p class="activity-card-previous">
-            Last Week - 10hrs
+            Last Week - <span class="previous-number"></span>hrs
           </p> 
         </div>
       </div>
@@ -120,72 +121,15 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="activity-card-bottom">
-          <p class="activity-card-time">2hrs</p>
+          <p class="activity-card-time"><span class="current-number"></span>hrs</p>
           <p class="activity-card-previous">
-            Last Week - 2hrs
+            Last Week - <span class="previous-number"></span>hrs
           </p> 
         </div>
       </div>
     </div> 
     <!-- end of card -->
   </div>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
- 
-    Work
-    5hrs <!-- daily -->
-    Previous - 7hrs <!-- daily -->
-    32hrs <!-- weekly -->
-    Previous - 36hrs <!-- weekly -->
-    103hrs <!-- monthly -->
-    Previous - 128hrs <!-- monthly -->
-    Play
-    1hr <!-- daily -->
-    Previous - 2hrs <!-- daily -->
-    10hrs <!-- weekly -->
-    Previous - 8hrs <!-- weekly -->
-    23hrs <!-- monthly -->
-    Previous - 29hrs <!-- monthly -->
-    Study
-    0hrs <!-- daily -->
-    Previous - 1hr <!-- daily -->
-    4hrs <!-- weekly -->
-    Previous - 7hrs <!-- weekly -->
-    13hrs <!-- monthly -->
-    Previous - 19hrs <!-- monthly -->
-    Exercise
-    1hr <!-- daily -->
-    Previous - 1hr <!-- daily -->
-    4hrs <!-- weekly -->
-    Previous - 5hrs <!-- weekly -->
-    11hrs <!-- monthly -->
-    Previous - 18hrs <!-- monthly -->
-    Social
-    1hr <!-- daily -->
-    Previous - 3hrs <!-- daily -->
-    5hrs <!-- weekly -->
-    Previous - 10hrs <!-- weekly -->
-    21hrs <!-- monthly -->
-    Previous - 23hrs <!-- monthly -->
-    Self Care
-    0hrs <!-- daily -->
-    Previous - 1hr <!-- daily -->
-    2hrs <!-- weekly -->
-    Previous - 2hrs <!-- weekly -->
-    7hrs <!-- monthly -->
-    Previous - 11hrs <!-- monthly -->
-<select name="time" id="">
-  <option value="daily">daily</option>
-  <option value="weekly">weekly</option>
-  <option value="monthly">monthly</option>
-</select>
-
   
   <script src="script.js"></script>
 </body>

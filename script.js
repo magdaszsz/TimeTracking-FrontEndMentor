@@ -1,37 +1,38 @@
-// {
-//     "title": "Work",
-//     "timeframes": {
-//       "daily": {
-//         "current": 5,
-//         "previous": 7
-//       },
-//       "weekly": {
-//         "current": 32,
-//         "previous": 36
-//       },
-//       "monthly": {
-//         "current": 103,
-//         "previous": 128
-//       }
-//     }
-//   }
+const btns = document.querySelectorAll('.btn');
+btns[1].classList.add("active");
+write('weekly')
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const frequency = btn.dataset.time;
+    btns.forEach(btn => btn.classList.remove('active'))
+    
+   btn.classList.add('active')
+    write(frequency)
+  })
+})
 
 
-const sel = document.querySelector('select')
+const activityCards = document.querySelectorAll('.card-content')
 
 
-function write() {
-  const val = sel.value;
+const currentEl = document.querySelector(".current-number");
+
+
+function write(frequency) {
+
   fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    data.forEach(el => {
-      const currentHours = el.timeframes[`${val}`].current;
-     const previousHours = el.timeframes[`${val}`].previous;
-     console.log(currentHours, previousHours)
-    }
-    )
-    
-  })
+     data.forEach((el, i) => {
+       const currentHours = el.timeframes[`${frequency}`].current;
+       const previousHours = el.timeframes[`${frequency}`].previous;
+       const card = activityCards[i];
+       const currentEl = card.querySelector(".current-number")
+       const prevEl = card.querySelector('.previous-number')
+       currentEl.innerText = currentHours;
+       prevEl.innerText = previousHours;
+     });
+   })
 }
-sel.addEventListener('change', write)
+
