@@ -131,7 +131,7 @@ body  {
 }
 
 .card-person {
-   background-color: hsl(235, 46%, 20%);
+  background-color: hsl(235, 46%, 20%);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -143,7 +143,6 @@ body  {
 }
 
 .activity-card {
-
   background-color: hsl(235, 46%, 20%);
   z-index: -10;
   position: relative;
@@ -233,7 +232,8 @@ body  {
   }
 
   .activity-card-time {
-    width: 13rem;
+    width: 80%;
+    padding-top: 1rem;
   }
 }
 
